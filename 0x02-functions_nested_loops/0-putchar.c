@@ -1,14 +1,17 @@
 #include "main.h"
 
 /**
-  * str - Entry point
-  * @name: Takes a character
+  * main - Entry point
   * Return: Always 1 (success)
   */
-void str(char *name)
+int main(void)
 {
-	name = "_putchar";
+	char str[] = "_putchar";
+	int i;
 
-	_putchar(name);
+	for (i = 0; i < 8; i++)
+		_putchar(str[i]);
 	_putchar('\n');
+
+	return (0);
 }
