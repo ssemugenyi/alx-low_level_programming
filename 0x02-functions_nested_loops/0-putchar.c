@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
   * main - Entry point
@@ -7,13 +7,13 @@
   */
 int main(void)
 {
-	char *str = "_putchar";
+	char *name = "_putchar";
 
-	while (*str)
+	while (*name)
 	{
-		printf("%c", *str++);
+		_putchar(*name++);
 	}
-	printf("\n");
+	_putchar('\n');
 	return (0);
 
 }
