@@ -1,19 +1,17 @@
 #include "main.h"
 
 /**
-  * main - Entry point
-  *
-  * Return: ALways 0 (success)
+  * str - Entry point
+  * @name: Takes a character
+  * Return: Always 1 (success)
   */
-int main(void)
+void str(char *name)
 {
-	char *name = "_putchar";
+	name = "_putchar";
 
 	while (*name)
 	{
 		_putchar(*name++);
 	}
 	_putchar('\n');
-	return (0);
-
 }
