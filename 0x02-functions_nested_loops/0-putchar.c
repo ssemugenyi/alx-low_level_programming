@@ -9,9 +9,6 @@ void str(char *name)
 {
 	name = "_putchar";
 
-	while (*name)
-	{
-		_putchar(*name++);
-	}
+	_putchar(name);
 	_putchar('\n');
 }
