@@ -6,8 +6,10 @@
   */
 void positive_or_negative(int i)
 {
+	i = 0;
+
 	if (i == 0)
 	{
-		printf("Is zero");
+		printf("%d is zero", i);
 	}
 }
