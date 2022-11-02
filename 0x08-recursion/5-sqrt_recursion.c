@@ -33,6 +33,10 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return(findsquareroot(n, (n + 1) / 2));
+		if (n > 1000000)
+		{
+			return (findsquareroot(n, (n + 1) / 100));
+		}
+		return (findsquareroot(n, (n + 1) / 2));
 	}
 }
