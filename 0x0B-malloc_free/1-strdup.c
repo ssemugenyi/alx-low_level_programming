@@ -6,25 +6,27 @@
   */
 char *_strdup(char *str)
 {
-	int j, end;
+	int j = 0, i = 0;
 	char *array;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (end = 0; end <= *str; end++)
+	while (str[i])
 	{
+		i++;
 	}
-	end += 1;
-	array = malloc(sizeof(char) * end);
-	for (j = 0; j < end; j++)
-	{
-		array[j] = str[j];
-	}
+	array = malloc(sizeof(char) * (i + 1));
 	if (array == NULL)
 	{
 		return (NULL);
 	}
+	while (str[j])
+	{
+		array[j] = str[j];
+		j++;
+	}
+	array[j + 1] = 0;
 	return (array);
 }
