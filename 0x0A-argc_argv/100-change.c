@@ -57,6 +57,6 @@ int change(int cents)
 			cents -= p;
 			coins++;
 		}
-		return (coins);
 	}
+	return (coins);
 }
