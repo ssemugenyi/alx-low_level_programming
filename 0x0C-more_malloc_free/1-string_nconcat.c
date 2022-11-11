@@ -2,6 +2,19 @@
 #include <stdio.h>
 #include "main.h"
 /**
+  * _strlen - calculate and return string length
+  * @string: string
+  * Return: string length
+  */
+int _strlen(char *string)
+{
+	int i;
+
+	for (i = 0; string[i] != '\0'; i++)
+		;
+	return (i);
+}
+/**
   * string_nconcat - concatenates two strings
   * @s1: first string
   * @s2: second string
@@ -10,44 +23,24 @@
   */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *array;
-	unsigned int i, j, counter, counter_2;
+	char *ptr;
+	int num, len, i, j;
 
+	num = n;
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
-	for (i = 0; s1[i] != '\0'; i++)
-	{
-	}
-	for (j = 0; s2[j] != '\0'; j++)
-	{
-	}
-	if (n < j)
-	{
-		j = n;
-	}
-	j += i;
-	array = malloc(sizeof(char *) * (j + 1));
-	if (array == NULL)
-	{
+	if (num < 0)
 		return (NULL);
-	}
-	for (counter = 0; counter < i; counter++)
-	{
-		array[counter] = s1[counter];
-	}
-	for (counter_2 = 0; counter < j; counter_2++)
-	{
-		array[counter] = s2[counter_2];
-		counter++;
-	}
-	counter++;
-	array[counter] = '\0';
-	return (array);
-
+	if (num >= _strlen(s2))
+		num = _strlen(s2);
+	len = _strlen(s1) + num + 1;
+	ptr = malloc(sizeof(*ptr) * len);
+	for (i = 0; s1[i] != '\0'; i++)
+		ptr[i] = s1[i];
+	for (j = 0; j < num; j++)
+		ptr[i + j] = s2[j];
+	ptr[i + j] = '\0';
+	return (ptr);
 }
