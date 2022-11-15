@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
+
+char *_strcpy(char *dest, char *src);
 /**
   * new_dog - new element of type struct dog
   *
